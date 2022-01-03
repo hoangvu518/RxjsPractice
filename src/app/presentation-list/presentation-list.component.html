@@ -1,0 +1,26 @@
+<style>
+  .price-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 200px;
+    width: 200px;
+    border: solid 1px red;
+  }
+
+  .red{
+    color: red;
+  }
+
+  .green{
+    color: green;
+  }
+
+
+</style>
+<div class="price-container" >
+
+    <div #myContainer *ngFor="let item of numberList$ | async" [ngClass]="getColor(item)">
+      {{ item.value | number: "1.4" }}
+    </div>
+</div>

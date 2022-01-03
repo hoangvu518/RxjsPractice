@@ -1,0 +1,20 @@
+<!-- <p>rxjs-test works!</p>
+<div *ngFor="let item of myData$ | async">
+  {{item}}
+
+</div>
+
+<div>
+  {{interval$ | async}}
+</div> -->
+<!-- <h1> my buttons</h1> -->
+
+<!-- <button (click)="addButton()">Click to add buttons</button> -->
+<div><button (click)="stop()">Stop</button></div>
+<div><button (click)="resume()"  [disabled]="disableButton$ | async">Resume</button></div>
+<div><button (click)="reset()">Reset</button></div>
+<div><label for="update-rate">Update Rate every 100ms</label>
+<input type="number" #updateRate id="update-rate" (input)="adjustRate(updateRate.valueAsNumber)" />
+</div>
+<!-- <input #searchBox id="search-box" (input)="search(searchBox.value)" /> -->
+<app-presentation-list [numberList$]="subject$"></app-presentation-list>
